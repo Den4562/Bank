@@ -1,0 +1,22 @@
+.logo{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logoTitle{
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logoV{
+    margin-left: 4px;
+    margin-top: 20px;
+    font-size: 10px;
+    color: grey;
+}
+
+.logoImg{
+height: 35px;
+margin-right: 12px;
+}
+

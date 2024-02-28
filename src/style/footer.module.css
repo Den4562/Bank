@@ -1,0 +1,76 @@
+.footerContainer{
+    width: 15.5vw;
+    height: 15vh;
+    background: rgb(201,180,254);
+    background: rgb(201,180,254);
+    background: -moz-linear-gradient(90deg, rgba(201,180,254,1) 9%, rgba(143,77,175,0.8477766106442577) 59%, rgba(96,65,179,0.8645833333333334) 90%);
+    background: -webkit-linear-gradient(90deg, rgba(201,180,254,1) 9%, rgba(143,77,175,0.8477766106442577) 59%, rgba(96,65,179,0.8645833333333334) 90%);
+    background: linear-gradient(90deg, rgba(201,180,254,1) 9%, rgba(143,77,175,0.8477766106442577) 59%, rgba(96,65,179,0.8645833333333334) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c9b4fe",endColorstr="#6041b3",GradientType=1);
+    margin-top: 400px;
+    text-align: center;
+    font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    border-radius: 3cap;
+
+}
+
+.footerText{
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 170px;
+    color: white;
+    font-size: 17px;
+}
+
+.footerBtn{
+    margin-left: 50px;
+    margin-top: 80px;
+    position: absolute;
+    width: 10vw;
+    height: 3.5vh;
+    background-color: white;
+    color:rgb(127, 56, 155);
+    text-align: center;
+    border-radius: 4cap;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footerBtn:hover {
+    transform: scale(0.95); 
+}
+
+.footerBtn:active {
+    transform: scale(0.90); 
+}
+
+.footerBtn p{
+    margin-top: 5px;
+}
+
+.footerImg{
+    width:2.5vw;
+    height: 5.4vh;
+    border-radius: 50%;
+
+}
+
+.profile{
+    margin-top: 90px;
+    display: flex;
+    font-size: 80%;
+    font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+}
+
+.profileName{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.profileStatus{
+    margin-top: 27px;
+    margin-left: -76px;
+    color: grey;
+}
