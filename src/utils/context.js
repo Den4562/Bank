@@ -1,35 +1,36 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { fetch_config } from "./fetch_config";
-
 const AppContext = createContext();
-
 export const useApp = () => {
   return useContext(AppContext);
 };
-
 export const AppProvider = ({ children }) => {
-  const [rate, setRate] = useState([]);
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
-
+  const [balance, setBalance] = useState([]);
+  const [startDate, setStartDate] = useState("20180101");
+  const [endDate, setEndDate] = useState("20230101");
   console.log(startDate);
   console.log(endDate);
-
-  const rateData = async (...obj) => {
+  const getData = async (...obj) => {
     try {
       const response = await fetch(
-        `${fetch_config.BASE_URL}${fetch_config.RATE_PATH}?${obj[0]}`
+        `${fetch_config.BASE_URL}/${fetch_config.EX_DEBET_PATH}?start=${startDate}&end=${endDate}&json`
       );
       const data = await response.json();
-      setRate(data);
+      setBalance(data);
       return data;
     } catch (error) {
       console.error(error);
     }
   };
+  useEffect(() => {
+    getData();
+  }, [startDate, endDate]);
   return (
-    <AppContext.Provider value={(rate, rateData, setStartDate, setEndDate)}>
-      {children}
+    <AppContext.Provider
+      value={{ balance, setBalance, getData, setStartDate, setEndDate }}
+    >
+      {" "}
+      {children}{" "}
     </AppContext.Provider>
   );
 };
