@@ -4,13 +4,14 @@ import { Doughnut } from "react-chartjs-2";
 import s from "../style/barChart.module.css";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const ColorChart = () => {
+const ColorChart = ({ propsData }) => {
+  console.log(propsData);
   const data = {
-    labels: [1, 2, 3, 4, 5],
+    labels: Object.keys(propsData),
     datasets: [
       {
-        label: "My first pie",
-        data: [12, 45, 78, 101, 56],
+        label: "Загальна сума, млн.грн",
+        data: Object.values(propsData),
         backgroundColor: ["red", "blue", "green", "yellow", "tomato"],
         borderWidth: 0,
         hoverBackgroundColor: "#5932EA",
@@ -18,10 +19,16 @@ const ColorChart = () => {
       },
     ],
   };
-  const options = {};
+  const options = {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
   return (
     <div className={`${s.chart} ${s.polarChart}`}>
-      <Doughnut data={data} option={options}></Doughnut>
+      <Doughnut data={data} options={options}></Doughnut>
     </div>
   );
 };

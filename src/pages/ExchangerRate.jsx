@@ -3,32 +3,11 @@ import { useApp } from "../utils/context";
 import BarChart from "../components/BarChart";
 import ColorChart from "../components/ColorChart";
 import Calendar from "../components/Calendar";
-
+import groupByDate from "../utils/groupByDate";
+import groupByCategory from "../utils/groupByCategory";
 const ExchangerRate = () => {
-  const { rate, rateData } = useApp();
-
-  const currentRate = Array.isArray(rate)
-    ? rate.filter((obj) => {
-        const date = new Date(obj.date * 1000);
-        console.log(date);
-        return date.getFullYear() === 2024;
-      })
-    : [];
-
-  console.log(currentRate);
-
-  useEffect(() => {
-    const getBalanceData = async () => {
-      try {
-        const result = await rateData(
-          "start=20200101&end=20240217&valcode=usd&sort=exchange"
-        );
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    getBalanceData();
-  }, []);
+  const { balance } = useApp();
+  console.log(balance);
 
   return (
     <div>
@@ -41,8 +20,8 @@ const ExchangerRate = () => {
         }}
       >
         {" "}
-        <BarChart />
-        <ColorChart />
+        <BarChart propsData={groupByDate(balance)} />
+        <ColorChart propsData={groupByCategory(balance)} />
       </div>
     </div>
   );

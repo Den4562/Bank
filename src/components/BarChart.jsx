@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 import s from "../style/barChart.module.css";
+import generateRandomColor from "../utils/randomColor";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -19,14 +20,15 @@ ChartJS.register(
   Legend
 );
 
-const BarChart = () => {
+const BarChart = ({ propsData }) => {
+  console.log(propsData);
   const data = {
-    labels: [1, 2, 3, 4, 5],
+    labels: Object.keys(propsData),
     datasets: [
       {
         label: "balance",
-        data: [23, 45, 12, 26, 78],
-        backgroundColor: ["Blue", "Teal", "Yellow", "Red", "Orange"],
+        data: Object.values(propsData),
+        backgroundColor: generateRandomColor(),
         hoverBackrgroundColor: "#5932EA",
       },
       //   {
