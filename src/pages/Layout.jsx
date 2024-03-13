@@ -6,6 +6,7 @@ const Layout = () => {
   return (
     <div className={s.layout_container}>
       <Navigation />
+      <div style={{ width: "25%" }}></div>
       <div className={s.outlet_container}>
         <Outlet />
       </div>

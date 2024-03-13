@@ -5,6 +5,8 @@ import ColorChart from "../components/ColorChart";
 import Calendar from "../components/Calendar";
 import groupByDate from "../utils/groupByDate";
 import groupByCategory from "../utils/groupByCategory";
+import LineChart from "../components/LineChart";
+import groupByCategoryYear from "../utils/groupByCategoryYear";
 const ExchangerRate = () => {
   const { balance } = useApp();
   console.log(balance);
@@ -23,6 +25,7 @@ const ExchangerRate = () => {
         <BarChart propsData={groupByDate(balance)} />
         <ColorChart propsData={groupByCategory(balance)} />
       </div>
+      <LineChart propsData={groupByCategoryYear(balance)} />
     </div>
   );
 };
