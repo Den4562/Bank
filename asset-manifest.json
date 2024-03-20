@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/.github.io/Bank/static/css/main.b2037ca5.css",
-    "main.js": "/.github.io/Bank/static/js/main.921f7eca.js",
-    "index.html": "/.github.io/Bank/index.html",
-    "main.b2037ca5.css.map": "/.github.io/Bank/static/css/main.b2037ca5.css.map",
-    "main.921f7eca.js.map": "/.github.io/Bank/static/js/main.921f7eca.js.map"
+    "main.css": "/static/css/main.b2037ca5.css",
+    "main.js": "/static/js/main.921f7eca.js",
+    "index.html": "/index.html",
+    "main.b2037ca5.css.map": "/static/css/main.b2037ca5.css.map",
+    "main.921f7eca.js.map": "/static/js/main.921f7eca.js.map"
   },
   "entrypoints": [
     "static/css/main.b2037ca5.css",
