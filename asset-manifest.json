@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Den4562/Bank/static/css/main.5a9ca062.css",
-    "main.js": "/Den4562/Bank/static/js/main.c86a60b6.js",
-    "index.html": "/Den4562/Bank/index.html",
-    "main.5a9ca062.css.map": "/Den4562/Bank/static/css/main.5a9ca062.css.map",
-    "main.c86a60b6.js.map": "/Den4562/Bank/static/js/main.c86a60b6.js.map"
+    "main.css": "/.github.io/Bank/static/css/main.b2037ca5.css",
+    "main.js": "/.github.io/Bank/static/js/main.921f7eca.js",
+    "index.html": "/.github.io/Bank/index.html",
+    "main.b2037ca5.css.map": "/.github.io/Bank/static/css/main.b2037ca5.css.map",
+    "main.921f7eca.js.map": "/.github.io/Bank/static/js/main.921f7eca.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a9ca062.css",
-    "static/js/main.c86a60b6.js"
+    "static/css/main.b2037ca5.css",
+    "static/js/main.921f7eca.js"
   ]
 }
